@@ -1,0 +1,14 @@
+Name: Insert details block
+Description: Inserts an HTML details block with R Markdown chunk at the cursor position.
+Binding: addin_details
+Interactive: false
+
+Name: Insert accessible image
+Description: Inserts an HTML image code with caption and alt text at the cursor position.
+Binding: addin_img_accessible
+Interactive: false
+
+Name: Insert new tab link
+Description: Inserts a Markdown web link that will open in a new tab when clicked.
+Binding: addin_new_tab
+Interactive: false
