@@ -1,11 +1,26 @@
 #' Insert expandable details block
 #'
 #' Call this function as an addin to insert at the cursor position an expandable
+#' HTML details block. 
+#'
+#' @export
+addin_details <- function() {
+  
+  rstudioapi::insertText('<details><summary>Click for details</summary>
+Text goes here
+</details>'
+  )
+  
+}
+
+#' Insert expandable session details block
+#'
+#' Call this function as an addin to insert at the cursor position an expandable
 #' HTML details block containing an R Markdown chunk containing the session info
 #' and current system date. 
 #'
 #' @export
-addin_details <- function() {
+addin_session_details <- function() {
   
   rstudioapi::insertText('<details><summary>Session info</summary>
 ```{r sessioninfo, echo=FALSE}

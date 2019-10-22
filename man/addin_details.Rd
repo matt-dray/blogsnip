@@ -8,6 +8,5 @@ addin_details()
 }
 \description{
 Call this function as an addin to insert at the cursor position an expandable
-HTML details block containing an R Markdown chunk containing the session info
-and current system date.
+HTML details block.
 }
