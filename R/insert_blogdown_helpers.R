@@ -1,4 +1,4 @@
-#' Insert expandable details block.
+#' Insert expandable details block
 #'
 #' Call this function as an addin to insert at the cursor position an expandable
 #' HTML details block containing an R Markdown chunk containing the session info
@@ -17,7 +17,7 @@ sessionInfo()
 
 }
 
-#' Insert accessible image HTML.
+#' Insert accessible image HTML
 #'
 #' Call this function as an addin to insert at the cursor position an HTML block
 #' that allows for the alt text and caption to differ, unlike \code{ ![]() }
@@ -34,8 +34,7 @@ addin_img_accessible <- function() {
   
 }
 
-
-#' Insert link that opens in a new tab.
+#' Insert link that opens in a new tab
 #'
 #' Call this function as an addin to insert at the cursor position a web link
 #' that opens in a new tab rather than the current tab.

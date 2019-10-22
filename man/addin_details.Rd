@@ -2,7 +2,7 @@
 % Please edit documentation in R/insert_blogdown_helpers.R
 \name{addin_details}
 \alias{addin_details}
-\title{Insert expandable details block.}
+\title{Insert expandable details block}
 \usage{
 addin_details()
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/insert_blogdown_helpers.R
 \name{addin_img_accessible}
 \alias{addin_img_accessible}
-\title{Insert accessible image HTML.}
+\title{Insert accessible image HTML}
 \usage{
 addin_img_accessible()
 }

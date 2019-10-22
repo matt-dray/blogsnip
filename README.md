@@ -2,7 +2,7 @@
 
 ## What
 
-A package of [RStudio addins](https://rstudio.github.io/rstudioaddins/) to insert code snippets into [{blogdown}](https://bookdown.org/yihui/blogdown/) posts.
+{blogsnip} is a package of [RStudio addins](https://rstudio.github.io/rstudioaddins/) for inserting code snippets into [{blogdown}](https://bookdown.org/yihui/blogdown/) posts.
 
 These snippets make my life easier when writing blog posts for [rostrum.blog](https://rostrum.blog). You may or may not find them useful. The package will be updated over time with new addins as I see fit.
 

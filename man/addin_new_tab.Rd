@@ -2,7 +2,7 @@
 % Please edit documentation in R/insert_blogdown_helpers.R
 \name{addin_new_tab}
 \alias{addin_new_tab}
-\title{Insert link that opens in a new tab.}
+\title{Insert link that opens in a new tab}
 \usage{
 addin_new_tab()
 }
