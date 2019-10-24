@@ -1,5 +1,7 @@
 # blogsnip
 
+<img src="https://www.rostrum.blog/post/2019-10-22-blogsnip-an-rstudio-addin-package_files/blogsnip.gif" alt="The blogsnip addin is demonstrated by selecting 'insert details block' from the addins menu, which creates an expandable details section when rendered from R Markdown to HTML.">
+
 ## What
 
 {blogsnip} is a package of [RStudio addins](https://rstudio.github.io/rstudioaddins/) for inserting code snippets into [{blogdown}](https://bookdown.org/yihui/blogdown/) posts.
