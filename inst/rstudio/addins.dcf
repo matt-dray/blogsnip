@@ -1,19 +1,28 @@
 Name: Insert details block
 Description: Inserts at the cursor position an HTML details block.
-Binding: addin_details
+Binding: bs_details_expand
 Interactive: false
 
 Name: Insert session details block
-Description: Inserts at the cursor position an HTML details block with R Markdown chunk containing.
-Binding: addin_session_details
+Description: Inserts at the cursor position an HTML details block with R
+    Markdown chunk containing.
+Binding: bs_session_details
 Interactive: false
 
 Name: Insert accessible image
-Description: Inserts  at the cursor position HTML image code with caption and alt text.
-Binding: addin_img_accessible
+Description: Inserts  at the cursor position HTML image code with caption and
+    alt text.
+Binding: bs_img_accessible
 Interactive: false
 
 Name: Insert new tab link
-Description: Inserts at the cursor position a Markdown web link that will open in a new tab when clicked.
-Binding: addin_new_tab
+Description: Inserts at the cursor position a Markdown web link that will open
+    in a new tab when clicked.
+Binding: bs_insert_link
+Interactive: false
+
+Name: Replace with new tab link
+Description: Inserts at selected text a Markdown web link that will open
+    in a new tab when clicked.
+Binding: bs_replace_link
 Interactive: false
