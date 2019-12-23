@@ -30,7 +30,7 @@ bs_session_details <- function() {
       '<details><summary>Session info</summary>\n',
       '```{r sessioninfo, echo=FALSE}\n',
       'paste("Last updated", Sys.Date())\n',
-      'sessionInfo()\n',
+      'sessioninfo::session_info()\n',
       '```\n',
       '</details>'
     )
