@@ -2,11 +2,10 @@
 % Please edit documentation in R/blosnip-helpers.R
 \name{bs_details_expand}
 \alias{bs_details_expand}
-\title{Insert Expandable Details Block}
+\title{Insert Details}
 \usage{
 bs_details_expand()
 }
 \description{
-Call this function as an addin to insert at the cursor position an expandable
-HTML details block.
+Inserts at the cursor position an expandable HTML details block.
 }

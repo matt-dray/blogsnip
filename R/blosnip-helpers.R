@@ -1,9 +1,9 @@
-#' Insert Expandable Details Block
+#' Insert Details
 #'
-#' Call this function as an addin to insert at the cursor position an expandable
-#' HTML details block. 
+#' Inserts at the cursor position an expandable HTML details block.
 #'
 #' @export
+
 bs_details_expand <- function() {
   
   rstudioapi::insertText(
@@ -16,14 +16,14 @@ bs_details_expand <- function() {
   
 }
 
-#' Insert Expandable Session Details Block
+#' Insert Session Details
 #'
-#' Call this function as an addin to insert at the cursor position an expandable
-#' HTML details block containing an R Markdown chunk containing the session info
-#' and current system date. 
+#' Inserts at the cursor position an expandable HTML details block that contains
+#' the date of the last update and session information.
 #'
 #' @export
-bs_session_details <- function() {
+
+bs_session_details<- function() {
   
   rstudioapi::insertText(
     paste0(
@@ -38,48 +38,36 @@ bs_session_details <- function() {
 
 }
 
-#' Insert Accessible Image HTML
-#'
-#' Call this function as an addin to insert at the cursor position an HTML block
-#' that allows for the alt text and caption to differ, unlike \code{ ![]() }
-#' syntax.
+#' Insert Accessible Image
+#' 
+#' Inserts at the cursor position some HTML image code that has caption and alt
+#' text elements.
 #'
 #' @export
+
 bs_img_accessible <- function() {
   
   rstudioapi::insertText(
     paste0(
       '<div class="figure">\n',
-      '<img src="path/to/img.png" alt="Descriptive alternative text." width=500 />\n',
-      '<p class="caption">This is a caption</p>\n',
+      '<img src="image.png" alt="Descriptive text." width=300/>\n',
+      '<p class="caption">Text</p>\n',
       '</div>'
     )
   )
   
 }
 
-#' Insert Link That Opens in a New Tab
-#'
-#' Call this function as an addin to insert at the cursor position some Markdown
-#' that will open a web link in a new tab rather than the current tab.
-#'
-#' @export
-bs_insert_link <- function() {
-  
-  rstudioapi::insertText('[](){target="_blank"}')
-  
-}
-
-#' Add to Selection a Link to Open in a New Tab
-#'
-#' Call this function as an addin to replace selected text with Markdown to an
-#' external link that opens in a new tab rather than the current tab. Thanks to
+#' Make Into Link
+#' 
+#' Modify the selected text or URL into the form \code{[](){target='_blank'}}.
+#' Thanks to
 #' \href{https://www.hvitfeldt.me/blog/creating-rstudio-addin-to-modify-selection/}{Emil
 #' Hvitfeldt's blog post} for guidance.
 #'
 #' @export
 
-bs_replace_link <- function() {
+bs_make_link <- function() {
   
   active_doc <- rstudioapi::getActiveDocumentContext()
   
@@ -97,3 +85,35 @@ bs_replace_link <- function() {
     
   }
 }
+
+#' Add {target='_blank'}
+
+#' In selected text, append \code{{target='_blank'}} to links that are in
+#' the form \code{[]()}.
+#'
+#' @export
+
+bs_target_blank <- function() {
+  
+  active_doc <- rstudioapi::getSourceEditorContext()
+  
+  if (!is.null(active_doc)) {
+    
+    selected_text <- active_doc$selection[[1]]$text
+    
+    link <- stringr::str_extract_all(
+      selected_text,
+      "\\[.+?\\]\\(.+?\\)(?=[^\\{?])"
+    )[[1]]
+
+    link_rgx <- gsub("([.|()\\^{}+$*?]|\\[|\\])", "\\\\\\1", link)
+
+    new_link <- paste0(link, "{target='_blank'}")
+
+    text_replace <- stringr::str_replace(selected_text, link_rgx, new_link)
+
+    rstudioapi::modifyRange(active_doc$selection[[1]]$range, text_replace)
+    
+  }
+}
+

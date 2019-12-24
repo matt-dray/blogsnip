@@ -1,28 +1,28 @@
-Name: Insert details block
-Description: Inserts at the cursor position an HTML details block.
+Name: Insert details
+Description: Inserts at the cursor position an expandable HTML details block.
 Binding: bs_details_expand
 Interactive: false
 
-Name: Insert session details block
-Description: Inserts at the cursor position an HTML details block with R
-    Markdown chunk containing.
+Name: Insert session details
+Description: Inserts at the cursor position an expandable HTML details block
+    that contains the date of the last update and session information.
 Binding: bs_session_details
 Interactive: false
 
 Name: Insert accessible image
-Description: Inserts  at the cursor position HTML image code with caption and
-    alt text.
+Description: Inserts at the cursor position some HTML image code that has
+    caption and alt text elements.
 Binding: bs_img_accessible
 Interactive: false
 
-Name: Insert new tab link
-Description: Inserts at the cursor position a Markdown web link that will open
-    in a new tab when clicked.
-Binding: bs_insert_link
+Name: Make into link
+Description: Modify the selected text or URL into the form
+    `[](){target='_blank'}`.
+Binding: bs_make_link
 Interactive: false
 
-Name: Replace with new tab link
-Description: Inserts at selected text a Markdown web link that will open
-    in a new tab when clicked.
-Binding: bs_replace_link
+Name: Add {target='_blank'}
+Description: In selected text, append {target='_blank'} to links that are in the
+    form `[]()`.
+Binding: bs_target_blank
 Interactive: false

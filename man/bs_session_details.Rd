@@ -2,12 +2,11 @@
 % Please edit documentation in R/blosnip-helpers.R
 \name{bs_session_details}
 \alias{bs_session_details}
-\title{Insert Expandable Session Details Block}
+\title{Insert Session Details}
 \usage{
 bs_session_details()
 }
 \description{
-Call this function as an addin to insert at the cursor position an expandable
-HTML details block containing an R Markdown chunk containing the session info
-and current system date.
+Inserts at the cursor position an expandable HTML details block that contains
+the date of the last update and session information.
 }

@@ -2,12 +2,11 @@
 % Please edit documentation in R/blosnip-helpers.R
 \name{bs_img_accessible}
 \alias{bs_img_accessible}
-\title{Insert Accessible Image HTML}
+\title{Insert Accessible Image}
 \usage{
 bs_img_accessible()
 }
 \description{
-Call this function as an addin to insert at the cursor position an HTML block
-that allows for the alt text and caption to differ, unlike \code{ ![]() }
-syntax.
+Inserts at the cursor position some HTML image code that has caption and alt
+text elements.
 }
