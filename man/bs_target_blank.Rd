@@ -2,14 +2,11 @@
 % Please edit documentation in R/blosnip-helpers.R
 \name{bs_target_blank}
 \alias{bs_target_blank}
-\title{Add {target='_blank'}
-In selected text, append \code{{target='_blank'}} to links that are in
-the form \code{[]()}.}
+\title{Add {target='_blank'}}
 \usage{
 bs_target_blank()
 }
 \description{
-Add {target='_blank'}
 In selected text, append \code{{target='_blank'}} to links that are in
 the form \code{[]()}.
 }
