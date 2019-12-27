@@ -27,6 +27,7 @@ bs_session_details<- function() {
   
   rstudioapi::insertText(
     paste0(
+      '---\n',
       '<details><summary>Session info</summary>\n',
       '```{r sessioninfo, echo=FALSE}\n',
       'paste("Last updated", Sys.Date())\n',
