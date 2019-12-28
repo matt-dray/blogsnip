@@ -9,6 +9,12 @@ Description: Inserts at the cursor position an expandable HTML details block
 Binding: bs_session_details
 Interactive: false
 
+Name: Embed tweet
+Description: Replace a Twitter shortcode with a chunk that contains code to
+    embed the tweet. Also names the chunk after the shortcode.
+Binding: bs_embed_tweet
+Interactive: false
+
 Name: Insert accessible image
 Description: Inserts at the cursor position some HTML image code that has
     caption and alt text elements.

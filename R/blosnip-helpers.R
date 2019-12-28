@@ -39,6 +39,32 @@ bs_session_details<- function() {
 
 }
 
+#' Embed Tweet
+#'
+#' Replace a Twitter shortcode with a chunk that contains code to embed the
+#' tweet. Also names the chunk after the shortcode.
+#'
+#' @export
+
+bs_embed_tweet <- function() {
+  
+  active_doc <- rstudioapi::getSourceEditorContext()
+  
+  if (!is.null(active_doc)) {
+    
+    selected_text <- active_doc$selection[[1]]$text
+    
+    text_replace <- paste0(
+      '```{r ', selected_text, ', echo=FALSE}\n',
+      'blogdown::shortcode("tweet", "', selected_text, '")\n',
+      '```\n'
+    )
+    
+    rstudioapi::modifyRange(active_doc$selection[[1]]$range, text_replace)
+    
+  }
+}
+
 #' Insert Accessible Image
 #' 
 #' Inserts at the cursor position some HTML image code that has caption and alt
