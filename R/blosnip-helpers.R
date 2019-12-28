@@ -88,7 +88,7 @@ bs_make_link <- function() {
 }
 
 #' Add {target='_blank'}
-
+#'
 #' In selected text, append \code{{target='_blank'}} to links that are in
 #' the form \code{[]()}.
 #'
@@ -118,3 +118,28 @@ bs_target_blank <- function() {
   }
 }
 
+#' Add Named Anchor
+#'
+#' Add a named anchor to the selected text, generating a hyphenated tag in the
+#' process. Remember to add '{#anchor-tag}' to where your anchoring to.
+#'
+#' @export
+
+bs_named_anchor <- function() {
+  
+  active_doc <- rstudioapi::getActiveDocumentContext()
+  
+  if (!is.null(active_doc)) {
+    
+    selected_text <- active_doc$selection[[1]]$text
+    
+    anchor_tag <- tolower(selected_text)
+    anchor_tag <- stringr::str_replace_all(anchor_tag, "[:punct:]", "")
+    anchor_tag <- stringr::str_replace_all(anchor_tag, "[:space:]", "-")
+    
+    text_replace <- paste0('[', selected_text, '](#', anchor_tag, ')')
+
+    rstudioapi::modifyRange(active_doc$selection[[1]]$range, text_replace)
+    
+  }
+}

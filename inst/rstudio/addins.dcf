@@ -26,3 +26,10 @@ Description: In selected text, append {target='_blank'} to links that are in the
     form `[]()`.
 Binding: bs_target_blank
 Interactive: false
+
+Name: Add named anchor
+Description: Add a named anchor to the selected text, generating a hyphenated
+    tag in the process. Remember to add '{#anchor-tag}' to where your anchoring
+    to.
+Binding: bs_named_anchor
+Interactive: false
