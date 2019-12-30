@@ -29,7 +29,8 @@ Interactive: false
 
 Name: Add blank target to link
 Description: In selected text, append {target='_blank'} to links that are in the
-    form `[]()`.
+    form `[]()`.  Currently works only when the highlighted text has only one
+    link to replace.
 Binding: bs_blank_target
 Interactive: false
 

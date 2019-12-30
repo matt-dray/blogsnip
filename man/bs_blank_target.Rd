@@ -8,5 +8,6 @@ bs_blank_target()
 }
 \description{
 In selected text, append \code{{target='_blank'}} to links that are in
-the form \code{[]()}.
+the form \code{[]()}. Currently works only when the highlighted text has only
+one link to replace.
 }

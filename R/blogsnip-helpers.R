@@ -116,7 +116,8 @@ bs_make_link <- function() {
 #' Add Blank Target to Link
 #'
 #' In selected text, append \code{{target='_blank'}} to links that are in
-#' the form \code{[]()}.
+#' the form \code{[]()}. Currently works only when the highlighted text has only
+#' one link to replace.
 #'
 #' @export
 
@@ -126,20 +127,41 @@ bs_blank_target <- function() {
   
   if (!is.null(active_doc)) {
     
+    # The text element of the active_doc object
     selected_text <- active_doc$selection[[1]]$text
     
-    link <- stringr::str_extract_all(
+    # Extract the link from the highlighted text
+    extracted_link <- stringr::str_extract_all(
       selected_text,
       "\\[.+?\\]\\(.+?\\)(?=[^\\{?])"
     )[[1]]
-
-    link_rgx <- gsub("([.|()\\^{}+$*?]|\\[|\\])", "\\\\\\1", link)
-
-    new_link <- paste0(link, "{target='_blank'}")
-
-    text_replace <- stringr::str_replace(selected_text, link_rgx, new_link)
-
-    rstudioapi::modifyRange(active_doc$selection[[1]]$range, text_replace)
+    
+    if (length(extracted_link) == 0) {
+      
+      # Don't need to replace a link that already has {target='blank'}
+      selected_text_replacement <- selected_text
+      
+    } else {
+      
+      # Create regex-friendly link string (i.e. escape '[' with '\\')
+      extracted_link_regex <- gsub(
+        "([.|()\\^{}+$*?]|\\[|\\])", "\\\\\\1", extracted_link
+      )
+      
+      # Create replacement link string
+      replacement_link <- paste0(extracted_link, "{target='_blank'}")
+      
+      # Replace extracted link with new link
+      selected_text_replacement <- stringr::str_replace(
+        selected_text, extracted_link_regex, replacement_link
+      )
+      
+    }
+    
+    # Modify selected text, replacing links to include {target='_blank'}
+    rstudioapi::modifyRange(
+      active_doc$selection[[1]]$range, selected_text_replacement
+    )
     
   }
 }
