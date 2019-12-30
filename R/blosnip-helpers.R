@@ -113,14 +113,14 @@ bs_make_link <- function() {
   }
 }
 
-#' Add {target='_blank'}
+#' Add Blank Target to Link
 #'
 #' In selected text, append \code{{target='_blank'}} to links that are in
 #' the form \code{[]()}.
 #'
 #' @export
 
-bs_target_blank <- function() {
+bs_blank_target <- function() {
   
   active_doc <- rstudioapi::getSourceEditorContext()
   

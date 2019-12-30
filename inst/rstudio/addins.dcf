@@ -27,10 +27,10 @@ Description: Modify the selected text or URL into the form
 Binding: bs_make_link
 Interactive: false
 
-Name: Add {target='_blank'}
+Name: Add blank target to link
 Description: In selected text, append {target='_blank'} to links that are in the
     form `[]()`.
-Binding: bs_target_blank
+Binding: bs_blank_target
 Interactive: false
 
 Name: Add named anchor
