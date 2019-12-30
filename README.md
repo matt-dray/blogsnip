@@ -11,9 +11,9 @@
 
 {blogsnip} is a package of [RStudio addins](https://rstudio.github.io/rstudioaddins/) for inserting code snippets into [{blogdown}](https://bookdown.org/yihui/blogdown/) posts.
 
-These snippets make my life easier when writing blog posts for [rostrum.blog](https://rostrum.blog). You may or may not find them useful. The package will be updated over time with new addins as I see fit.
+These snippets make my life easier when writing R Markdown blog posts for [rostrum.blog](https://rostrum.blog). You may or may not find them useful. The package will be updated over time with new addins as I see fit.
 
-This repo is [available as a website](https://matt-dray.github.io/blogsnip/), thanks to [{pkgdown}](https://pkgdown.r-lib.org/). You can read about each addin on [the 'references' page](https://matt-dray.github.io/blogsnip/reference/index.html).
+You can read about each addin on [the 'references' page of the {blogsnip} website](https://matt-dray.github.io/blogsnip/reference/index.html) or [browse the source](https://github.com/matt-dray/blogsnip/blob/master/R/blogsnip-helpers.R).
 
 ## Install
 
