@@ -9,12 +9,6 @@ Description: Inserts at the cursor position an expandable HTML details block
 Binding: bs_session_details
 Interactive: false
 
-Name: Embed tweet
-Description: Replace a Twitter shortcode with a chunk that contains code to
-    embed the tweet. Also names the chunk after the shortcode.
-Binding: bs_embed_tweet
-Interactive: false
-
 Name: Insert accessible image
 Description: Inserts at the cursor position some HTML image code that has
     caption and alt text elements.
@@ -27,10 +21,15 @@ Description: Modify the selected text or URL into the form
 Binding: bs_make_link
 Interactive: false
 
-Name: Add blank target to link
-Description: In selected text, append {target='_blank'} to links that are in the
-    form `[]()`.  Currently works only when the highlighted text has only one
-    link to replace.
+Name: Embed tweet
+Description: Replace a Twitter shortcode with a chunk that contains code to
+    embed the tweet. Also names the chunk after the shortcode.
+Binding: bs_embed_tweet
+Interactive: false
+
+Name: Add blank target to links
+Description: In selected text, append {target='_blank'} to all links that are in
+    the form `[]()`. 
 Binding: bs_blank_target
 Interactive: false
 

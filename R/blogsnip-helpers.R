@@ -63,6 +63,7 @@ bs_embed_tweet <- function() {
     rstudioapi::modifyRange(active_doc$selection[[1]]$range, text_replace)
     
   }
+
 }
 
 #' Insert Accessible Image
@@ -111,13 +112,13 @@ bs_make_link <- function() {
     rstudioapi::modifyRange(active_doc$selection[[1]]$range, text_replace)
     
   }
+
 }
 
-#' Add Blank Target to Link
+#' Add Blank Target to Links
 #'
-#' In selected text, append \code{{target='_blank'}} to links that are in
-#' the form \code{[]()}. Currently works only when the highlighted text has only
-#' one link to replace.
+#' In selected text, append \code{{target='_blank'}} to all links that are in
+#' the form \code{[]()}.
 #'
 #' @export
 
@@ -133,7 +134,7 @@ bs_blank_target <- function() {
     # Extract the link from the highlighted text
     extracted_link <- stringr::str_extract_all(
       selected_text,
-      "\\[.+?\\]\\(.+?\\)(?=[^\\{?])"
+      "\\[(.*?)\\]\\((.*?)\\)"
     )[[1]]
     
     if (length(extracted_link) == 0) {
@@ -151,9 +152,31 @@ bs_blank_target <- function() {
       # Create replacement link string
       replacement_link <- paste0(extracted_link, "{target='_blank'}")
       
-      # Replace extracted link with new link
-      selected_text_replacement <- stringr::str_replace(
-        selected_text, extracted_link_regex, replacement_link
+      # Remove current {target='_blank'} from selected text
+      selected_text_no_blank <- stringr::str_replace_all(
+        selected_text,
+        paste0(
+          "\\{target='_blank'\\}|\\{target = '_blank'\\}|",
+          "\\{target=\"_blank\"\\}|\\{target = \"_blank\"\\}"
+        ),
+        ""
+      )
+      
+      # Replace extracted links with new links
+      selected_text_replacement <- stringi::stri_replace_all_regex(
+        selected_text_no_blank,
+        extracted_link_regex,
+        replacement_link,
+        vectorize_all = FALSE
+      )
+      
+      # Hacky fix for when multiple links in the selected text are the same,
+      # which produces a double set of blank targets, like: 
+      # [link](https://www.example.com){target='_blank'}{target='_blank'}
+      selected_text_replacement <- stringr::str_replace_all(
+        selected_text_replacement,
+        "(\\{target='_blank'\\}){2,}",  # two or more instances
+        "\\{target='_blank'\\}"  # replace with single
       )
       
     }
@@ -164,6 +187,7 @@ bs_blank_target <- function() {
     )
     
   }
+
 }
 
 #' Add Named Anchor
@@ -190,4 +214,5 @@ bs_named_anchor <- function() {
     rstudioapi::modifyRange(active_doc$selection[[1]]$range, text_replace)
     
   }
+  
 }
