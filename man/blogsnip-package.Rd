@@ -4,7 +4,7 @@
 \name{blogsnip-package}
 \alias{blogsnip}
 \alias{blogsnip-package}
-\title{blogsnip: Insert Useful Code Snippets For Blogdown Posts.}
+\title{blogsnip: Insert Useful Code Snippets For Blogdown Posts}
 \description{
 RStudio addins to insert code snippets that are useful for
     writing Blogdown posts.

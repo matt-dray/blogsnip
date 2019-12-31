@@ -1,5 +1,5 @@
 Package: blogsnip
-Title: Insert Useful Code Snippets For Blogdown Posts.
+Title: Insert Useful Code Snippets For Blogdown Posts
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Matt",
@@ -15,4 +15,4 @@ RoxygenNote: 7.0.1
 Suggests:
     rstudioapi
 Imports: 
-    stringr
+    stringi

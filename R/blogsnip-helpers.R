@@ -132,7 +132,7 @@ bs_blank_target <- function() {
     selected_text <- active_doc$selection[[1]]$text
     
     # Extract the link from the highlighted text
-    extracted_link <- stringr::str_extract_all(
+    extracted_link <- stringi::stri_extract_all_regex(
       selected_text,
       "\\[(.*?)\\]\\((.*?)\\)"
     )[[1]]
@@ -153,7 +153,7 @@ bs_blank_target <- function() {
       replacement_link <- paste0(extracted_link, "{target='_blank'}")
       
       # Remove current {target='_blank'} from selected text
-      selected_text_no_blank <- stringr::str_replace_all(
+      selected_text_no_blank <- stringi::stri_replace_all_regex(
         selected_text,
         paste0(
           "\\{target='_blank'\\}|\\{target = '_blank'\\}|",
@@ -173,7 +173,7 @@ bs_blank_target <- function() {
       # Hacky fix for when multiple links in the selected text are the same,
       # which produces a double set of blank targets, like: 
       # [link](https://www.example.com){target='_blank'}{target='_blank'}
-      selected_text_replacement <- stringr::str_replace_all(
+      selected_text_replacement <- stringi::stri_replace_all_regex(
         selected_text_replacement,
         "(\\{target='_blank'\\}){2,}",  # two or more instances
         "\\{target='_blank'\\}"  # replace with single
@@ -206,8 +206,8 @@ bs_named_anchor <- function() {
     selected_text <- active_doc$selection[[1]]$text
     
     anchor_tag <- tolower(selected_text)
-    anchor_tag <- stringr::str_replace_all(anchor_tag, "[:punct:]", "")
-    anchor_tag <- stringr::str_replace_all(anchor_tag, "[:space:]", "-")
+    anchor_tag <- stringi::stri_replace_all_regex(anchor_tag, "[:punct:]", "")
+    anchor_tag <- stringi::stri_replace_all_regex(anchor_tag, "[:space:]", "-")
     
     text_replace <- paste0('[', selected_text, '](#', anchor_tag, ')')
 
