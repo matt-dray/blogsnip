@@ -1,0 +1,51 @@
+---
+title: "Introduction to {blogsnip}"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{intro}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = ""
+)
+```
+
+# Purpose
+
+{blogsnip} is a small, personal collection of functions that make it easier for me to write my {blogdown} posts for [rostrum.blog](https://www.rostrum.blog){target="_blank"} in R Markdown. They generally insert code snippets or modify strings highlighted by the user.
+
+{blogsnip} is designed to operate as an [RStudio Addin](https://rstudio.github.io/rstudioaddins/){target="_blank"}. This means its functions can be accessed from the dedicated Addins dropdown menu in the RStudio GUI and each can be mapped to a keyboard shortcut.
+
+I later learned about--and can definitely recommend--[ThinkR's {remedy} package](https://github.com/ThinkR-open/remedy){target="_blank"} for inserting other, basic R Markdown snippets.
+
+# Install
+
+{blogsnip} isn't on CRAN and it probably never will be. Install from GitHub with {remotes}.
+
+```{r eval=FALSE}
+# install.packages("remotes")
+remotes::install_github("matt-dray/blogsnip")
+```
+
+The {blogsnip} functions will then appear in the 'BLOGSNIP' section of the 'Addins' menu of RStudio. Restart RStudio if they don't appear immediately.
+
+# Functions
+
+This is a list of functions available from {blogsnip}. You can [see the source on GitHub](https://github.com/matt-dray/blogsnip/blob/master/R/blogsnip-helpers.R){target="_blank"}.
+
+Some functions are designed to insert code snippets and others to modify selected text.
+
+| Name | Purpose | Before | After |
+| :-- | :-- | :-- | :-- |
+| Insert Details | Inserts at the cursor position an expandable HTML details block. | [blank] | `<details>`<br>`<summary>Click for details</summary>`<br>`Text goes here</details>`) |
+| Insert Session Details | Inserts at the cursor position an expandable HTML details block that contains the date of the last update and session information. | [blank] | `---`<br>`<details>`<br>`<summary>Session info</summary>`<br>```` ```{r sessioninfo, echo=FALSE}` ````<br>`paste("Last updated", Sys.Date())`<br>`sessioninfo::session_info()`<br>```` ``` ````<br>`</details>` |
+| Embed Tweet | Replace a Twitter shortcode with a chunk that contains code to embed the tweet. Also names the chunk after the shortcode. | `1186758761249157122` | ```` ```{r 1186758761249157122, echo=FALSE} ````<br>`blogdown::shortcode("tweet", "1186758761249157122")`<br>```` ``` ```` |
+| Insert Accessible Image | Inserts at the cursor position some HTML image code that has caption and alt text elements. | [blank] | `<div class="figure">`<br>`<img src="image.png" alt="Descriptive text." width=300/>`<br>`<p class="caption">Text</p>`<br>`</div>` |
+| Make Into Link | Modify the selected text or URL into the form `[](){target='_blank'}` | `Some text` | `[Some text](){target='_blank'}` |
+|  |  | `https://www.rostrum.blog/` | `[](https://www.rostrum.blog/){target='_blank'}` |
+| Add Blank Target to Links | In selected text, append `{target='_blank'}` to all links that are in the form `[]()`. | `This is a [link](https://www.rostrum.blog/).` | `This is a [link](https://www.rostrum.blog/){target='_blank'}.` |
+| Add Named Anchor | Add a named anchor to the selected text, generating a hyphenated tag in the process. Remember to add `{#anchor-tag}` to where your anchoring to. | `An anchor point` | `An anchor point[#an-anchor-point]` |

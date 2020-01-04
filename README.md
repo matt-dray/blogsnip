@@ -13,7 +13,7 @@
 
 These snippets make my life easier when writing R Markdown blog posts for [rostrum.blog](https://rostrum.blog). You may or may not find them useful. The package will be updated over time with new addins as I see fit.
 
-You can read about each addin on [the 'references' page of the {blogsnip} website](https://matt-dray.github.io/blogsnip/reference/index.html) or [browse the source](https://github.com/matt-dray/blogsnip/blob/master/R/blogsnip-helpers.R).
+You can read about each function in the [vignette](https://matt-dray.github.io/blogsnip/articles/intro.html), on [the 'references' page of the {blogsnip} website](https://matt-dray.github.io/blogsnip/reference/index.html) or [browse the source](https://github.com/matt-dray/blogsnip/blob/master/R/blogsnip-helpers.R).
 
 ## Install
 
