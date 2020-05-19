@@ -38,3 +38,5 @@ vignettes/*.pdf
 # macOS DS Store
 *.DS_Store
 inst/doc
+doc
+Meta

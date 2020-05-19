@@ -30,7 +30,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">blogsnip</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9001</span>
       </span>
     </div>
 
@@ -56,6 +56,9 @@
       <a href="../articles/intro.html">Introduction to {blogsnip}</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right"></ul>
@@ -123,10 +126,10 @@
 </tr>
 <tr class="even">
 <td align="left">Insert Session Details</td>
-<td align="left">Inserts at the cursor position an expandable HTML details block that contains the date of the last update and session information.</td>
+<td align="left">Inserts at the cursor position an expandable HTML details block that contains the session information.</td>
 <td align="left">[blank]</td>
 <td align="left">
-<code>---</code><br><code>&lt;details&gt;</code><br><code>&lt;summary&gt;Session info&lt;/summary&gt;</code><br><code>```{r sessioninfo, echo=FALSE}`</code><br><code><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste("Last updated", Sys.Date())</a></code><br><code><a href="https://www.rdocumentation.org/packages/sessioninfo/topics/session_info">sessioninfo::session_info()</a></code><br><code>```</code><br><code>&lt;/details&gt;</code>
+<code>---</code><br><code>&lt;details&gt;</code><br><code>&lt;summary&gt;Session info&lt;/summary&gt;</code><br><code>```{r sessioninfo, echo=FALSE}`</code><br><code><a href="https://www.rdocumentation.org/packages/sessioninfo/topics/session_info">sessioninfo::session_info()</a></code><br><code>```</code><br><code>&lt;/details&gt;</code>
 </td>
 </tr>
 <tr class="odd">
@@ -142,7 +145,7 @@
 <td align="left">Inserts at the cursor position some HTML image code that has caption and alt text elements.</td>
 <td align="left">[blank]</td>
 <td align="left">
-<code>&lt;div class="figure"&gt;</code><br><code>&lt;img src="image.png" alt="Descriptive text." width=300/&gt;</code><br><code>&lt;p class="caption"&gt;Text&lt;/p&gt;</code><br><code>&lt;/div&gt;</code>
+<code>&lt;div class="figure"&gt;</code><br><code>&lt;img src="image.png" alt="Descriptive text." width="100%"/&gt;</code><br><code>&lt;p class="caption"&gt;Text&lt;/p&gt;</code><br><code>&lt;/div&gt;</code>
 </td>
 </tr>
 <tr class="odd">

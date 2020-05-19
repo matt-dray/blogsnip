@@ -1,6 +1,6 @@
 Package: blogsnip
 Title: Insert Useful Code Snippets For Blogdown Posts
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: 
     person(given = "Matt",
            family = "Dray",
@@ -8,7 +8,7 @@ Authors@R:
            email = "mwdray@gmail.com")
 Description: RStudio addins to insert code snippets that are useful for
     writing Blogdown posts.
-License: CC0
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2

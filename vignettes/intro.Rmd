@@ -42,9 +42,9 @@ Some functions are designed to insert code snippets and others to modify selecte
 | Name | Purpose | Before | After |
 | :-- | :-- | :-- | :-- |
 | Insert Details | Inserts at the cursor position an expandable HTML details block. | [blank] | `<details>`<br>`<summary>Click for details</summary>`<br>`Text goes here</details>`) |
-| Insert Session Details | Inserts at the cursor position an expandable HTML details block that contains the date of the last update and session information. | [blank] | `---`<br>`<details>`<br>`<summary>Session info</summary>`<br>```` ```{r sessioninfo, echo=FALSE}` ````<br>`paste("Last updated", Sys.Date())`<br>`sessioninfo::session_info()`<br>```` ``` ````<br>`</details>` |
+| Insert Session Details | Inserts at the cursor position an expandable HTML details block that contains the session information. | [blank] | `---`<br>`<details>`<br>`<summary>Session info</summary>`<br>```` ```{r sessioninfo, echo=FALSE}` ````<br>`sessioninfo::session_info()`<br>```` ``` ````<br>`</details>` |
 | Embed Tweet | Replace a Twitter shortcode with a chunk that contains code to embed the tweet. Also names the chunk after the shortcode. | `1186758761249157122` | ```` ```{r 1186758761249157122, echo=FALSE} ````<br>`blogdown::shortcode("tweet", "1186758761249157122")`<br>```` ``` ```` |
-| Insert Accessible Image | Inserts at the cursor position some HTML image code that has caption and alt text elements. | [blank] | `<div class="figure">`<br>`<img src="image.png" alt="Descriptive text." width=300/>`<br>`<p class="caption">Text</p>`<br>`</div>` |
+| Insert Accessible Image | Inserts at the cursor position some HTML image code that has caption and alt text elements. | [blank] | `<div class="figure">`<br>`<img src="image.png" alt="Descriptive text." width="100%"/>`<br>`<p class="caption">Text</p>`<br>`</div>` |
 | Make Into Link | Modify the selected text or URL into the form `[](){target='_blank'}` | `Some text` | `[Some text](){target='_blank'}` |
 |  |  | `https://www.rostrum.blog/` | `[](https://www.rostrum.blog/){target='_blank'}` |
 | Add Blank Target to Links | In selected text, append `{target='_blank'}` to all links that are in the form `[]()`. | `This is a [link](https://www.rostrum.blog/).` | `This is a [link](https://www.rostrum.blog/){target='_blank'}.` |

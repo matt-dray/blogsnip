@@ -23,14 +23,13 @@ bs_details_expand <- function() {
 #'
 #' @export
 
-bs_session_details<- function() {
+bs_session_details <- function() {
   
   rstudioapi::insertText(
     paste0(
       '---\n',
       '<details><summary>Session info</summary>\n',
       '```{r sessioninfo, echo=FALSE}\n',
-      'paste("Last updated", Sys.Date())\n',
       'sessioninfo::session_info()\n',
       '```\n',
       '</details>'
@@ -78,7 +77,7 @@ bs_img_accessible <- function() {
   rstudioapi::insertText(
     paste0(
       '<div class="figure">\n',
-      '<img src="image.png" alt="Descriptive text." width=300/>\n',
+      '<img src="image.png" alt="Descriptive text." width="100%"/>\n',
       '<p class="caption">Text</p>\n',
       '</div>'
     )
