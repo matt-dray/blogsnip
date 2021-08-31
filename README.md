@@ -8,7 +8,7 @@
 
 ## What
 
-{blogsnip} is a package of [RStudio addins](https://rstudio.github.io/rstudioaddins/) for inserting code snippets. 
+{blogsnip} is a package of miscellaneous [RStudio addins](https://rstudio.github.io/rstudioaddins/) for inserting code snippets or updating selected code.
 
 The addins make it easier for me to write [{blogdown}](https://bookdown.org/yihui/blogdown/) posts for [rostrum.blog](https://rostrum.blog). You may or may not find them useful.
 
@@ -16,7 +16,6 @@ You can read about each function in the [vignette](https://matt-dray.github.io/b
 
 <div class="figure">
 <img src="https://www.rostrum.blog/post/2019-10-22-blogsnip-an-rstudio-addin-package_files/blogsnip.gif" alt="The blogsnip RStudio addin is demonstrated by selecting 'insert details block' from the addins menu, which creates an expandable details section when rendered from R Markdown to HTML." width="400px"/>
-<p class="caption">The function `bs_details_expand()` via an RStudio addin</p>
 </div>
 
 ## Install
@@ -24,11 +23,17 @@ You can read about each function in the [vignette](https://matt-dray.github.io/b
 Install from GitHub with:
 
 ``` r
-install.packages("remotes")
+install.packages("remotes")  # if not yet installed
 remotes::install_github("matt-dray/blogsnip")
 ```
 
 Restart RStudio and the addins will then be available from the 'Addins' menu in RStudio, listed under 'BLOGSNIP'.
+
+If you want to use 'Add Closing Paren Labels', the addin for the `bs_add_biscuits()`, you'll also need to install {lintr} and {styler}.
+
+``` r
+install.packages(c("lintr", "styler"))
+```
 
 ## Contribute
 
