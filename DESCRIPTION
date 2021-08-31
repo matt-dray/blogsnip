@@ -1,21 +1,23 @@
 Package: blogsnip
-Title: Insert Useful Code Snippets For Blogdown Posts
-Version: 0.0.0.9001
+Title: Misc RStudio Addins To Insert Code Snippets
+Version: 0.0.0.9002
 Authors@R: 
     person(given = "Matt",
            family = "Dray",
            role = c("aut", "cre"),
            email = "mwdray@gmail.com")
-Description: RStudio addins to insert code snippets that are useful for
-    writing Blogdown posts.
+Description: Some RStudio addins for personal use that insert code snippets to
+    help me write R Markdown documents, obstensibly {blogdown} posts.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.0.2
-Suggests:
-    rstudioapi,
-    knitr,
-    rmarkdown
+RoxygenNote: 7.1.1
 Imports: 
     stringi
+Suggests:
+    knitr,
+    lintr,
+    rmarkdown,
+    rstudioapi,
+    styler
 VignetteBuilder: knitr

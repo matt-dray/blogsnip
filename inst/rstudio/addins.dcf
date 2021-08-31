@@ -39,3 +39,10 @@ Description: Add a named anchor to the selected text, generating a hyphenated
     to.
 Binding: bs_named_anchor
 Interactive: false
+
+Name: Add closing paren labels [WIP]
+Description: In development. Adds comments after closing parentheses in your
+    selection with the name of the function being closed (sometimes called
+    'biscuits'). Warning: also styles the file. Please check the output.
+Binding: bs_add_biscuits
+Interactive: false
