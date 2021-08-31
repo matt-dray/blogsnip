@@ -83,13 +83,11 @@
 <div id="what" class="section level2">
 <h2 class="hasAnchor">
 <a href="#what" class="anchor"></a>What</h2>
-<p>{blogsnip} is a package of <a href="https://rstudio.github.io/rstudioaddins/">RStudio addins</a> for inserting code snippets.</p>
+<p>{blogsnip} is a package of miscellaneous <a href="https://rstudio.github.io/rstudioaddins/">RStudio addins</a> for inserting code snippets or updating selected code.</p>
 <p>The addins make it easier for me to write <a href="https://bookdown.org/yihui/blogdown/">{blogdown}</a> posts for <a href="https://rostrum.blog">rostrum.blog</a>. You may or may not find them useful.</p>
 <p>You can read about each function in the <a href="https://matt-dray.github.io/blogsnip/articles/intro.html">vignette</a>, on <a href="https://matt-dray.github.io/blogsnip/reference/index.html">the ‘references’ page of the {blogsnip} website</a> or <a href="https://github.com/matt-dray/blogsnip/blob/master/R/blogsnip-helpers.R">browse the source</a>.</p>
 <div class="figure">
-<img src="https://www.rostrum.blog/post/2019-10-22-blogsnip-an-rstudio-addin-package_files/blogsnip.gif" alt="The blogsnip RStudio addin is demonstrated by selecting 'insert details block' from the addins menu, which creates an expandable details section when rendered from R Markdown to HTML." width="400px"><p class="caption">
-The function <code><a href="reference/bs_details_expand.html">bs_details_expand()</a></code> via an RStudio addin
-</p>
+<img src="https://www.rostrum.blog/post/2019-10-22-blogsnip-an-rstudio-addin-package_files/blogsnip.gif" alt="The blogsnip RStudio addin is demonstrated by selecting 'insert details block' from the addins menu, which creates an expandable details section when rendered from R Markdown to HTML." width="400px">
 </div>
 </div>
 <div id="install" class="section level2">
@@ -97,9 +95,12 @@ The function <code><a href="reference/bs_details_expand.html">bs_details_expand(
 <a href="#install" class="anchor"></a>Install</h2>
 <p>Install from GitHub with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>  <span class="co"># if not yet installed</span>
 <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"matt-dray/blogsnip"</span><span class="op">)</span></code></pre></div>
 <p>Restart RStudio and the addins will then be available from the ‘Addins’ menu in RStudio, listed under ‘BLOGSNIP’.</p>
+<p>If you want to use ‘Add Closing Paren Labels’, the addin for the <code><a href="reference/bs_add_biscuits.html">bs_add_biscuits()</a></code>, you’ll also need to install {lintr} and {styler}.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"lintr"</span>, <span class="st">"styler"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="contribute" class="section level2">
 <h2 class="hasAnchor">
