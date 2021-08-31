@@ -35,7 +35,7 @@ bs_session_details <- function() {
       '</details>'
     )
   )
-
+  
 }
 
 #' Embed Tweet
@@ -62,7 +62,7 @@ bs_embed_tweet <- function() {
     rstudioapi::modifyRange(active_doc$selection[[1]]$range, text_replace)
     
   }
-
+  
 }
 
 #' Insert Accessible Image
@@ -107,11 +107,11 @@ bs_make_link <- function() {
       paste0('[](', selected_text, '){target="_blank"}'),
       paste0('[', selected_text, '](){target="_blank"}')
     )
-
+    
     rstudioapi::modifyRange(active_doc$selection[[1]]$range, text_replace)
     
   }
-
+  
 }
 
 #' Add Blank Target to Links
@@ -186,7 +186,7 @@ bs_blank_target <- function() {
     )
     
   }
-
+  
 }
 
 #' Add Named Anchor
@@ -209,7 +209,31 @@ bs_named_anchor <- function() {
     anchor_tag <- stringi::stri_replace_all_regex(anchor_tag, "[:space:]", "-")
     
     text_replace <- paste0('[', selected_text, '](#', anchor_tag, ')')
+    
+    rstudioapi::modifyRange(active_doc$selection[[1]]$range, text_replace)
+    
+  }
+  
+}
 
+#' Add Closing Paren Labels [WIP]
+#'
+#' In development. Adds comments after closing parentheses in your selection 
+#' with the name of the function being closed (sometimes called 'biscuits'). 
+#' Warning: also styles the file. Please check the output.
+#'
+#' @export
+
+bs_add_biscuits <- function() {
+  
+  active_doc <- rstudioapi::getActiveDocumentContext()
+  
+  if (!is.null(active_doc)) {
+    
+    selected_text <- active_doc$selection[[1]]$text
+    
+    text_replace <- .add_biscuits(selected_text)
+    
     rstudioapi::modifyRange(active_doc$selection[[1]]$range, text_replace)
     
   }
