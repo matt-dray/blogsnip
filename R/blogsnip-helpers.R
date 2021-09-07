@@ -92,7 +92,7 @@ bs_img_accessible <- function() {
 #'
 #' @export
 
-bs_make_link <- function() {
+bs_embed_url <- function() {
   
   active_doc <- rstudioapi::getActiveDocumentContext()
   
