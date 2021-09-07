@@ -85,6 +85,33 @@ bs_img_accessible <- function() {
   
 }
 
+
+#' Embed URL
+#' 
+#' Modify the selected text or URL into the form \code{{% embed url="" caption="" %}}.
+#'
+#' @export
+
+bs_make_link <- function() {
+  
+  active_doc <- rstudioapi::getActiveDocumentContext()
+  
+  if (!is.null(active_doc)) {
+    
+    selected_text <- active_doc$selection[[1]]$text
+    
+    text_replace <- 
+      paste0('{% embed url="', selected_text, '" caption="" %}')
+    
+    rstudioapi::modifyRange(active_doc$selection[[1]]$range, text_replace)
+    
+  }
+  
+}
+
+
+
+
 #' Make Into Link
 #' 
 #' Modify the selected text or URL into the form \code{[](){target='_blank'}}.
