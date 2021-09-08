@@ -63,7 +63,14 @@
   <a href="news/index.html">Changelog</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/matt-dray/blogsnip/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -83,12 +90,13 @@
 <div id="what" class="section level2">
 <h2 class="hasAnchor">
 <a href="#what" class="anchor"></a>What</h2>
-<p>{blogsnip} is a package of miscellaneous <a href="https://rstudio.github.io/rstudioaddins/">RStudio addins</a> for inserting code snippets or updating selected code.</p>
-<p>The addins make it easier for me to write <a href="https://bookdown.org/yihui/blogdown/">{blogdown}</a> posts for <a href="https://rostrum.blog">rostrum.blog</a>. You may or may not find them useful.</p>
-<p>You can read about each function in the <a href="https://matt-dray.github.io/blogsnip/articles/intro.html">vignette</a>, on <a href="https://matt-dray.github.io/blogsnip/reference/index.html">the ‘references’ page of the {blogsnip} website</a> or <a href="https://github.com/matt-dray/blogsnip/blob/master/R/blogsnip-helpers.R">browse the source</a>.</p>
+<p>{blogsnip} is a package of miscellaneous <a href="https://rstudio.github.io/rstudioaddins/">RStudio addins</a> to insert code snippets and update code selections.</p>
+<p>In general, the addins make it easier for me to write R Markdown posts for the <a href="https://bookdown.org/yihui/blogdown/">{blogdown}</a>-powered <a href="https://rostrum.blog">rostrum.blog</a> site. You may or may not find them useful.</p>
+<p>Consider also the excellent <a href="https://thinkr-open.github.io/remedy/">{remedy} package</a> from ThinkR, which has a number of general RStudio addins to help you write R Markdown.</p>
 <div class="figure">
 <img src="https://www.rostrum.blog/post/2019-10-22-blogsnip-an-rstudio-addin-package_files/blogsnip.gif" alt="The blogsnip RStudio addin is demonstrated by selecting 'insert details block' from the addins menu, which creates an expandable details section when rendered from R Markdown to HTML." width="400px">
 </div>
+<p>You can read about each function in the <a href="https://matt-dray.github.io/blogsnip/articles/intro.html">vignette</a>, on <a href="https://matt-dray.github.io/blogsnip/reference/index.html">the ‘references’ page of the {blogsnip} website</a> or <a href="https://github.com/matt-dray/blogsnip/blob/master/R/blogsnip-helpers.R">browse the source</a>.</p>
 </div>
 <div id="install" class="section level2">
 <h2 class="hasAnchor">
@@ -105,13 +113,23 @@
 <div id="contribute" class="section level2">
 <h2 class="hasAnchor">
 <a href="#contribute" class="anchor"></a>Contribute</h2>
-<p>Feel free to <a href="https://github.com/matt-dray/blogsnip/issues">add or suggest new snippets</a>. Please note that the ‘blogsnip’ project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+<p>Feel free to <a href="https://github.com/matt-dray/blogsnip/issues">add or suggest new snippets</a>.</p>
+<p>Please note that the ‘blogsnip’ project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <div class="license">
+    <div class="links">
+<h2>Links</h2>
+<ul class="list-unstyled">
+<li>Browse source code at <br><a href="https://github.com/matt-dray/blogsnip/">https://​github.com/​matt-dray/​blogsnip/​</a>
+</li>
+<li>Report a bug at <br><a href="https://github.com/matt-dray/blogsnip/issues">https://​github.com/​matt-dray/​blogsnip/​issues</a>
+</li>
+</ul>
+</div>
+<div class="license">
 <h2>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
@@ -128,13 +146,14 @@
 <h2>Developers</h2>
 <ul class="list-unstyled">
 <li>Matt Dray <br><small class="roles"> Author, maintainer </small>  </li>
+<li><a href="authors.html">All authors...</a></li>
 </ul>
 </div>
 
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.repostatus.org/#concept"><img src="https://www.repostatus.org/badges/latest/concept.svg" alt="Project Status: Concept – Minimal or no implementation has been done yet, or the repository is only intended to be a limited example, demo, or proof-of-concept."></a></li>
+<li><a href="https://www.repostatus.org/#wip"><img src="https://www.repostatus.org/badges/latest/wip.svg" alt="Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public."></a></li>
 <li><a href="https://github.com/matt-dray/blogsnip/actions"><img src="https://github.com/matt-dray/blogsnip/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://www.rostrum.blog/2019/10/22/blogsnip/"><img src="https://img.shields.io/badge/rostrum.blog-post-008900?labelColor=000000&amp;logo=data%3Aimage%2Fgif%3Bbase64%2CR0lGODlhEAAQAPEAAAAAABWCBAAAAAAAACH5BAlkAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC55QkISIiEoQQQgghRBBCiCAIgiAIgiAIQiAIgSAIgiAIQiAIgRAEQiAQBAQCgUAQEAQEgYAgIAgIBAKBQBAQCAKBQEAgCAgEAoFAIAgEBAKBIBAQCAQCgUAgEAgCgUBAICAgICAgIBAgEBAgEBAgEBAgECAgICAgECAQIBAQIBAgECAgICAgICAgECAQECAQICAgICAgICAgEBAgEBAgEBAgICAgICAgECAQIBAQIBAgECAgICAgIBAgECAQECAQIBAgICAgIBAgIBAgEBAgECAgECAgICAgICAgECAgECAgQIAAAQIKAAAh%2BQQJZAACACwAAAAAEAAQAAAC55QkIiESIoQQQgghhAhCBCEIgiAIgiAIQiAIgSAIgiAIQiAIgRAEQiAQBAQCgUAQEAQEgYAgIAgIBAKBQBAQCAKBQEAgCAgEAoFAIAgEBAKBIBAQCAQCgUAgEAgCgUBAICAgICAgIBAgEBAgEBAgEBAgECAgICAgECAQIBAQIBAgECAgICAgICAgECAQECAQICAgICAgICAgEBAgEBAgEBAgICAgICAgECAQIBAQIBAgECAgICAgIBAgECAQECAQIBAgICAgIBAgIBAgEBAgECAgECAgICAgICAgECAgECAgQIAAAQIKAAA7" alt="Blog post"></a></li>
 </ul>
