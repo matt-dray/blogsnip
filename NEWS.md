@@ -1,3 +1,11 @@
+# blogsnip 0.0.0.9003
+
+* Added `bs_embed_url()` (contributed by @sbalci)
+* Added @sbalci as contributor in DESCRIPTION
+* Added URL and BugReports to DESCRIPTION
+* Changed README badge to WIP
+* Updated README to mention {remedy}
+
 # blogsnip 0.0.0.9002
 
 * Added `bs_add_biscuits()` and utils

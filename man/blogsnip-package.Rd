@@ -9,8 +9,22 @@
 Some RStudio addins for personal use that insert code snippets to
     help me write R Markdown documents, obstensibly {blogdown} posts.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/matt-dray/blogsnip}
+  \item \url{https://matt-dray.github.io/blogsnip/}
+  \item Report bugs at \url{https://github.com/matt-dray/blogsnip/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Matt Dray \email{mwdray@gmail.com}
+
+Other contributors:
+\itemize{
+  \item Serdar Balci \email{drserdarbalci@gmail.com} [contributor]
+}
 
 }
 \keyword{internal}
