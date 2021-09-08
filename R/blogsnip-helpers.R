@@ -85,7 +85,6 @@ bs_img_accessible <- function() {
   
 }
 
-
 #' Embed URL
 #' 
 #' Modify the selected text or URL into the form \code{{% embed url="" caption="" %}}.
@@ -108,9 +107,6 @@ bs_embed_url <- function() {
   }
   
 }
-
-
-
 
 #' Make Into Link
 #' 
