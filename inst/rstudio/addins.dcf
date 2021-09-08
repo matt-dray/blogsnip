@@ -15,6 +15,12 @@ Description: Inserts at the cursor position some HTML image code that has
 Binding: bs_img_accessible
 Interactive: false
 
+Name: Embed URL
+Description: Modify the selected text or URL into the form
+    `{% embed url="" caption="" %}`. 
+Binding: bs_embed_url
+Interactive: false
+
 Name: Make into link
 Description: Modify the selected text or URL into the form
     `[](){target='_blank'}`.
