@@ -87,7 +87,7 @@ bs_img_accessible <- function() {
 
 #' Embed URL
 #' 
-#' Modify the selected text or URL into the form \code{{% embed url="" caption="" %}}.
+#' Modify the selected text or URL into the form  \code{{\% embed url='' caption='' \%}}.
 #'
 #' @export
 

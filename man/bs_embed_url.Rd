@@ -7,5 +7,5 @@
 bs_embed_url()
 }
 \description{
-
+Modify the selected text or URL into the form  \code{{\% embed url='' caption='' \%}}.
 }
