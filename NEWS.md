@@ -1,3 +1,7 @@
+# blogsnip 0.0.0.9004
+
+* Removed {lintr} as suggested package
+
 # blogsnip 0.0.0.9003
 
 * Added `bs_embed_url()` (contributed by @sbalci)

@@ -31,10 +31,10 @@ remotes::install_github("matt-dray/blogsnip")
 
 Restart RStudio and the addins will then be available from the 'Addins' menu in RStudio, listed under 'BLOGSNIP'.
 
-If you want to use 'Add Closing Paren Labels', the addin for the `bs_add_biscuits()`, you'll also need to install {lintr} and {styler}.
+If you want to use 'Add Closing Paren Labels', the addin for the `bs_add_biscuits()`, you'll also need to install {styler} from CRAN.
 
 ``` r
-install.packages(c("lintr", "styler"))
+install.packages("styler")
 ```
 
 ## Contribute

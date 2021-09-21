@@ -3,9 +3,7 @@
   file <- tempfile(fileext = ".R")
   writeLines(string, file)
   
-  linted <- lintr::get_source_expressions(file)
-  parsed <- linted$expressions[[1]]$parsed_content
-  
+  parsed <- getParseData(parse(file))  
   parsed <- parsed[parsed$terminal == TRUE, ]
   rownames(parsed) <- as.character(seq(nrow(parsed)))
   

@@ -1,6 +1,6 @@
 Package: blogsnip
-Title: Misc RStudio Addins To Insert Code Snippets
-Version: 0.0.0.9003
+Title: Misc RStudio Addins to Help R Markdown
+Version: 0.0.0.9004
 Authors@R: 
     c(person(given = "Matt", 
              family = "Dray",
@@ -10,8 +10,8 @@ Authors@R:
              family = "Balci",
              role = c("ctb"),
              email = "drserdarbalci@gmail.com"))
-Description: Some RStudio addins for personal use that insert code snippets to
-    help me write R Markdown documents, obstensibly {blogdown} posts.
+Description: Assorted RStudio addins for personal use that insert code snippets 
+    to help me write R Markdown documents, particularly {blogdown} posts.
 License: MIT + file LICENSE
 URL: https://github.com/matt-dray/blogsnip,
     https://matt-dray.github.io/blogsnip/
@@ -23,7 +23,6 @@ Imports:
     stringi
 Suggests:
     knitr,
-    lintr,
     rmarkdown,
     rstudioapi,
     styler
