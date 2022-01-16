@@ -21,6 +21,12 @@ Description: Modify the selected text or URL into the form
 Binding: bs_embed_url
 Interactive: false
 
+Name: Insert knitr comment engine 
+Description: Modify the selected text into the knitr comment engine 
+Binding: bs_embed_comment
+Interactive: false
+
+
 Name: Make into link
 Description: Modify the selected text or URL into the form
     `[](){target='_blank'}`.
