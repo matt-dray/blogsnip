@@ -6,8 +6,7 @@
 \alias{blogsnip-package}
 \title{blogsnip: Misc RStudio Addins to Help R Markdown}
 \description{
-Assorted RStudio addins for personal use that insert code snippets 
-    to help me write R Markdown documents, particularly {blogdown} posts.
+Assorted RStudio addins for personal use that insert code snippets to help me write R Markdown documents, particularly {blogdown} posts.
 }
 \seealso{
 Useful links:

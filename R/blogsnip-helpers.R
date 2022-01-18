@@ -108,6 +108,35 @@ bs_embed_url <- function() {
   
 }
 
+
+
+#' Insert knitr comment engine
+#' 
+#' Modify the selected text into the knitr comment engine.
+#' As described \href{https://github.com/rstudio/rmarkdown/issues/1619#issuecomment-1010045812}{here}.
+#' @export
+
+bs_embed_comment <- function() {
+  
+  active_doc <- rstudioapi::getActiveDocumentContext()
+  
+  if (!is.null(active_doc)) {
+    
+    selected_text <- active_doc$selection[[1]]$text
+    
+    text_replace <- 
+      paste0("```{comment}\n",
+      selected_text, "\n",
+      "```"
+      )
+    
+    rstudioapi::modifyRange(active_doc$selection[[1]]$range, text_replace)
+    
+  }
+  
+}
+
+
 #' Make Into Link
 #' 
 #' Modify the selected text or URL into the form \code{[](){target='_blank'}}.
