@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,18 +33,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">blogsnip</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9004</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.0.9004</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
@@ -64,7 +60,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/matt-dray/blogsnip/">
+  <a href="https://github.com/matt-dray/blogsnip/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -85,33 +81,33 @@
       <h1 data-toc-skip>Introduction to {blogsnip}</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/matt-dray/blogsnip/blob/master/vignettes/intro.Rmd"><code>vignettes/intro.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/matt-dray/blogsnip/blob/HEAD/vignettes/intro.Rmd" class="external-link"><code>vignettes/intro.Rmd</code></a></small>
       <div class="hidden name"><code>intro.Rmd</code></div>
 
     </div>
 
     
     
-<div id="purpose" class="section level1">
-<h1 class="hasAnchor">
-<a href="#purpose" class="anchor"></a>Purpose</h1>
-<p>{blogsnip} is a small, personal collection of functions that make it easier for me to write my {blogdown} posts for <a href="https://www.rostrum.blog" target="_blank">rostrum.blog</a> in R Markdown. They generally insert code snippets or modify strings highlighted by the user.</p>
-<p>{blogsnip} is designed to operate as an <a href="https://rstudio.github.io/rstudioaddins/" target="_blank">RStudio Addin</a>. This means its functions can be accessed from the dedicated Addins dropdown menu in the RStudio GUI and each can be mapped to a keyboard shortcut.</p>
-<p>I later learned about–and can definitely recommend–<a href="https://github.com/ThinkR-open/remedy" target="_blank">ThinkR’s {remedy} package</a> for inserting other, basic R Markdown snippets.</p>
+<div class="section level2">
+<h2 id="purpose">Purpose<a class="anchor" aria-label="anchor" href="#purpose"></a>
+</h2>
+<p>{blogsnip} is a small, personal collection of functions that make it easier for me to write my {blogdown} posts for <a href="https://www.rostrum.blog" target="_blank" class="external-link">rostrum.blog</a> in R Markdown. They generally insert code snippets or modify strings highlighted by the user.</p>
+<p>{blogsnip} is designed to operate as an <a href="https://rstudio.github.io/rstudioaddins/" target="_blank" class="external-link">RStudio Addin</a>. This means its functions can be accessed from the dedicated Addins dropdown menu in the RStudio GUI and each can be mapped to a keyboard shortcut.</p>
+<p>I later learned about–and can definitely recommend–<a href="https://github.com/ThinkR-open/remedy" target="_blank" class="external-link">ThinkR’s {remedy} package</a> for inserting other, basic R Markdown snippets.</p>
 </div>
-<div id="install" class="section level1">
-<h1 class="hasAnchor">
-<a href="#install" class="anchor"></a>Install</h1>
+<div class="section level2">
+<h2 id="install">Install<a class="anchor" aria-label="anchor" href="#install"></a>
+</h2>
 <p>{blogsnip} isn’t on CRAN and it probably never will be. Install from GitHub with {remotes}.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
 <span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"matt-dray/blogsnip"</span><span class="op">)</span></code></pre></div>
 <p>The {blogsnip} functions will then appear in the ‘BLOGSNIP’ section of the ‘Addins’ menu of RStudio. Restart RStudio if they don’t appear immediately.</p>
 </div>
-<div id="functions" class="section level1">
-<h1 class="hasAnchor">
-<a href="#functions" class="anchor"></a>Functions</h1>
-<p>This is a list of functions available from {blogsnip}. You can <a href="https://github.com/matt-dray/blogsnip/blob/master/R/blogsnip-helpers.R" target="_blank">see the source on GitHub</a>.</p>
+<div class="section level2">
+<h2 id="functions">Functions<a class="anchor" aria-label="anchor" href="#functions"></a>
+</h2>
+<p>This is a list of functions available from {blogsnip}. You can <a href="https://github.com/matt-dray/blogsnip/blob/master/R/blogsnip-helpers.R" target="_blank" class="external-link">see the source on GitHub</a>.</p>
 <p>Some functions are designed to insert code snippets and others to modify selected text.</p>
 <table class="table">
 <colgroup>
@@ -139,7 +135,7 @@
 <td align="left">Inserts at the cursor position an expandable HTML details block that contains the session information.</td>
 <td align="left">[blank]</td>
 <td align="left">
-<code>---</code><br><code>&lt;details&gt;</code><br><code>&lt;summary&gt;Session info&lt;/summary&gt;</code><br><code>```{r sessioninfo, echo=FALSE}`</code><br><code><a href="https://rdrr.io/pkg/sessioninfo/man/session_info.html">sessioninfo::session_info()</a></code><br><code>```</code><br><code>&lt;/details&gt;</code>
+<code>---</code><br><code>&lt;details&gt;</code><br><code>&lt;summary&gt;Session info&lt;/summary&gt;</code><br><code>```{r sessioninfo, echo=FALSE}`</code><br><code><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html" class="external-link">sessioninfo::session_info()</a></code><br><code>```</code><br><code>&lt;/details&gt;</code>
 </td>
 </tr>
 <tr class="odd">
@@ -199,11 +195,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Matt Dray.</p>
+  <p></p>
+<p>Developed by Matt Dray.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>
@@ -211,6 +209,8 @@
 
   
 
+
+  
 
   </body>
 </html>
